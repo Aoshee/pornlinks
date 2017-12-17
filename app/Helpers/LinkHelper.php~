@@ -11,7 +11,7 @@ class LinkHelper {
          * @return boolean
          */
         $shortener_domains = [
-            'PORN.me',
+            'polr.me',
             'bit.ly',
             'is.gd',
             'tiny.cc',
@@ -116,7 +116,7 @@ class LinkHelper {
          * find the next available base-32/62 ending.
          * @return string
          */
-        $base = env('PORN_BASE');
+        $base = env('POLR_BASE');
 
         $link = Link::where('is_custom', 0)
             ->orderBy('created_at', 'desc')

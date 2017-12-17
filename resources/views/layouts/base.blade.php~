@@ -1,5 +1,5 @@
 <!--
-PORN, a minimalist URL shortening platform.
+Polr, a minimalist URL shortening platform.
 Copyright (C) 2013-2017 Chaoyi Zha
 
 This program is free software; you can redistribute it and/or
@@ -18,14 +18,14 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 -->
 
 <!DOCTYPE html>
-<html ng-app="PORN">
+<html ng-app="polr">
 <head>
     <title>@section('title'){{env('APP_NAME')}}@show</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     {{-- Leave this for stats --}}
-    <meta name="generator" content="Bluefish 2.2.7" />
+    <meta name="generator" content="Polr {{env('POLR_VERSION')}}" />
     @yield('meta')
 
     {{-- Load Stylesheets --}}

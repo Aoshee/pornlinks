@@ -57,7 +57,7 @@ class LinkFactory {
 
         if (!$is_secret && (!isset($custom_ending) || $custom_ending === '') && (LinkHelper::longLinkExists($long_url, $creator) !== false)) {
             // if link is not specified as secret, is non-custom, and
-            // already exists in PORN, lookup the value and return
+            // already exists in Polr, lookup the value and return
             $existing_link = LinkHelper::longLinkExists($long_url, $creator);
             return self::formatLink($existing_link);
         }
@@ -102,7 +102,7 @@ class LinkFactory {
         }
 
         if ($is_secret) {
-            $rand_bytes_num = intval(env('PORN_SECRET_BYTES'));
+            $rand_bytes_num = intval(env('POLR_SECRET_BYTES'));
             $secret_key = CryptoHelper::generateRandomHex($rand_bytes_num);
             $link->secret_key = $secret_key;
         }

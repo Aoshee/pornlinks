@@ -15,11 +15,11 @@ class LinkHelperTest extends TestCase
             'https://google.com',
             'https://example.com/google',
             'https://cydrobolt.com',
-            'http://github.com/cydrobolt/PORN'
+            'http://github.com/cydrobolt/polr'
         ];
 
         $shortened = [
-            'https://PORN.me/1',
+            'https://polr.me/1',
             'http://bit.ly/1PUf6Sw',
             'http://'.env('APP_ADDRESS').'/1',
             'https://goo.gl/2pSp9f'

@@ -53,15 +53,15 @@ class UserController extends Controller {
     }
 
     public function performSignup(Request $request) {
-        if (env('PORN_ALLOW_ACCT_CREATION') == false) {
+        if (env('POLR_ALLOW_ACCT_CREATION') == false) {
             return redirect(route('index'))->with('error', 'Sorry, but registration is disabled.');
         }
 
-        if (env('PORN_ACCT_CREATION_RECAPTCHA')) {
+        if (env('POLR_ACCT_CREATION_RECAPTCHA')) {
             // Verify reCAPTCHA if setting is enabled
             $gRecaptchaResponse = $request->input('g-recaptcha-response');
 
-            $recaptcha = new \ReCaptcha\ReCaptcha(env('PORN_RECAPTCHA_SECRET_KEY'));
+            $recaptcha = new \ReCaptcha\ReCaptcha(env('POLR_RECAPTCHA_SECRET_KEY'));
             $recaptcha_resp = $recaptcha->verify($gRecaptchaResponse, $request->ip());
 
             if (!$recaptcha_resp->isSuccess()) {
@@ -99,7 +99,7 @@ class UserController extends Controller {
             return redirect(route('signup'))->with('error', 'Sorry, your email or username already exists. Try again.');
         }
 
-        $acct_activation_needed = env('PORN_ACCT_ACTIVATION');
+        $acct_activation_needed = env('POLR_ACCT_ACTIVATION');
 
         if ($acct_activation_needed == false) {
             // if no activation is necessary

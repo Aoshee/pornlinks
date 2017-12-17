@@ -16,7 +16,7 @@
             <input type="submit" value="Login" class="login-submit btn btn-success" />
 
             <p class='login-prompts'>
-            @if (env('PORN_ALLOW_ACCT_CREATION') == true)
+            @if (env('POLR_ALLOW_ACCT_CREATION') == true)
                 <small>Don't have an account? <a href='{{route('signup')}}'>Register</a></small>
             @endif
 

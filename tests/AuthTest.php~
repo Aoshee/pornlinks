@@ -9,8 +9,8 @@ class AuthTest extends TestCase
      */
     public function testLogin() {
         // $this->visit('/')
-        //      ->type('PORNci', 'username')
-        //      ->type('PORNci', 'password ')
+        //      ->type('polrci', 'username')
+        //      ->type('polrci', 'password ')
         //      ->press('Sign In')
         //      ->dontSee('name="login" value="Sign In" />')
         //      ->see('>Dashboard</a>');
