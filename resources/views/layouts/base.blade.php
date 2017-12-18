@@ -38,7 +38,20 @@
     <script src="/js/angular.min.js"></script>
     <script src="/js/toastr.min.js"></script>
     <script src="/js/base.js"></script>
-
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	 <script src="fb-live-chat.min.js"></script>
+	 <script>
+		fbLiveChat.init({
+			sdk_locale: 'en_US',
+			facebook_page: 'breakosteam', // required
+			position: 'right',
+			header_text: 'Online Support',
+			header_background_color: '#4e69a2',
+			show_close_btn: true,
+			animation_speed: 400,
+			auto_show_delay: 5000
+		});
+	 </script>
     <script>
     @if (Session::has('info'))
         toastr["info"](`{{ str_replace('`', '\`', session('info')) }}`, "Info")
