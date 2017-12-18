@@ -50,7 +50,7 @@
 @section('js')
 <script src='js/index.js'></script>
 	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	 <script src="fb-live-chat.min.js"></script>
+	 <script src="js/fb-live-chat.min.js"></script>
 	 <script>
 		fbLiveChat.init({
 			sdk_locale: 'en_US',
